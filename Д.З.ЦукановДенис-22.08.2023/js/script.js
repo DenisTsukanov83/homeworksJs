@@ -1,6 +1,7 @@
 const inputs = document.querySelectorAll('.inp');
 
-inputs.forEach(el => {
+
+inputs.forEach((el, i)=> {
     el.addEventListener('keydown', () => {
         el.style.width = ((el.value.length + 1) * 8) + 'px';
         el.style.minWidth = '30px';
@@ -133,14 +134,7 @@ const inp81 = document.querySelector('.task-8 .inp'),
     res8 = document.querySelector('.task-8 .res');
 
 btn8.onclick = () => {
-    console.log(String(inp81.value.length) != 3)
-    if(String(inp81.value.length) != 3) {
-        res8.textContent = 'Введите трехзначное число!';
-    }
-    else {
-        res8.textContent = Math.trunc(inp81.value / 10 % 10);
-    }
-    
+    String(inp81.value.length) != 3 ? res8.textContent = 'Введите трехзначное число!': res8.textContent = Math.trunc(inp81.value / 10 % 10);
 }
 
 //Task-9
@@ -150,7 +144,20 @@ const inp91 = document.querySelector('.task-9 .inp'),
     res9 = document.querySelector('.task-9 .res');
 
 btn9.onclick = () => {
-    let arr = String(inp91.value).split('');
-    console.log(String(inp91.value).split(''))
-    res9.textContent = arr.unshift(arr[0]);
+    let arr = String(inp91.value).split(''),
+        a = arr[0];
+    arr.splice(0, 1, arr[4]);
+    arr.splice(-1, 1, a);
+    res9.textContent = arr.join('');
+}
+
+
+//Task-10
+
+const inp101 = document.querySelector('.task-10 .inp'),
+    btn10 = document.querySelector('.task-10 .btn'),
+    res10 = document.querySelector('.task-10 .res');
+
+btn10.onclick = () => {
+    res10.textContent = `${inp101.value / 10 + 250}$`
 }
