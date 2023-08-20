@@ -134,7 +134,7 @@ const inp81 = document.querySelector('.task-8 .inp'),
     res8 = document.querySelector('.task-8 .res');
 
 btn8.onclick = () => {
-    String(inp81.value.length) != 3 ? res8.textContent = 'Введите трехзначное число!': res8.textContent = Math.trunc(inp81.value / 10 % 10);
+    inp81.value.length != 3 ? res8.textContent = 'Введите трехзначное число!': res8.textContent = Math.trunc(inp81.value / 10 % 10);
 }
 
 //Task-9
@@ -148,7 +148,7 @@ btn9.onclick = () => {
         a = arr[0];
     arr.splice(0, 1, arr[4]);
     arr.splice(-1, 1, a);
-    res9.textContent = arr.join('');
+    inp91.value.length != 5 ? res9.textContent = 'Введите пятизначное число!' : res9.textContent = arr.join('');
 }
 
 
