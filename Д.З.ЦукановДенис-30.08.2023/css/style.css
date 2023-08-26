@@ -51,17 +51,14 @@ input::-webkit-inner-spin-button {
     background-color: rgb(203, 203, 203);
 }
 
-.task-1 .btn {
-    margin-left: 20px;
+.btn-sign {
+    width: max-content;
+    padding: 0 5px;
 }
 
-
-.task-1 .btn:after{
-    content: '2';
-    display: block;
-    position: absolute;
-    top: -20px;
-    left: -25px;
+.task-5 .btn-sign {
+    width: 20px;
+    padding: 0 5px;
 }
 
 .active {
