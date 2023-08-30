@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <h3>Задача №9</h3>
+    <p>
+        Задать пользователю 3 вопроса, в каждом вопросе по 3 варианта ответа. За каждый правильный ответ начисляется 2 балла. После вопросов выведите пользователю количество набранных баллов.
+    </p>
+    
+    <div class="task task-1">
+        <div class="wrapper">
+            <div class="question question-1">
+                <div class="sign">9 * 9 = ?</div>
+                <div class="answers">
+                    <div>
+                        <input class="answer-1" type="radio" name="question-1" value="91" checked>
+                        <label for="answer-1">91</label>
+                    </div>
+                    <div>
+                        <input class="answer-2" type="radio" name="question-1" value="81">
+                        <label for="answer-2">81</label>
+                    </div>
+                    <div>
+                        <input class="answer-3" type="radio" name="question-1" value="72">
+                        <label for="answer-3">72</label>
+                    </div>
+                    
+                </div>
+            </div>
+            <div class="question question-2">
+                <div class="sign">7 * 8 = ?</div>
+                <div class="answers">
+                    <div>
+                        <input class="answer-4" type="radio" name="question-2" value="56" checked>
+                        <label for="answer-4">56</label>
+                    </div>
+                    <div>
+                        <input class="answer-5" type="radio" name="question-2" value="40">
+                        <label for="answer-5">40</label>
+                    </div>
+                    <div>
+                        <input class="answer-6" type="radio" name="question-2" value="64">
+                        <label for="answer-6">64</label>
+                    </div>
+                </div>
+            </div>
+            <div class="question question-3">
+                <div class="sign">9 * 6 = ?</div>
+                <div class="answers">
+                    <div>
+                        <input class="answer-7" type="radio" name="question-3" value="45" checked>
+                        <label for="answer-7">56</label>
+                    </div>
+                    <div>
+                        <input class="answer-8" type="radio" name="question-3" value="54">
+                        <label for="answer-8">54</label>
+                    </div>
+                    <div>
+                        <input class="answer-9" type="radio" name="question-3" value="48">
+                        <label for="answer-9">64</label>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn">=</div>
+        <div class="res"></div>
+    </div>
+    <h3>Задача №10</h3>
+    <p>
+        Запросить дату (день, месяц, год) и вывести следующую за ней дату. Учтите возможность перехода на следующий месяц, год, а также високосный год. 
+    </p>
+    <div class="task task-2">
+        <div class="sign">День:</div>
+        <div>
+            <input type="number" class="inp first" value="">
+        </div>
+        <div class="sign">Месяц:</div>
+        <div>
+            <input type="number" class="inp second" value="">
+        </div>
+        <div class="sign">Год:</div>
+        <div>
+            <input type="number" class="inp third" value="">
+        </div>
+        <div class="btn">=</div>
+        <div class="res"></div>
+    </div>
+
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>

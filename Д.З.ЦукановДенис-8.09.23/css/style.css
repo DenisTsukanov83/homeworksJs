@@ -1,0 +1,71 @@
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    margin-bottom: 50px;
+}
+.res {
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    min-width: 30px;
+    height: 28px;
+    width: max-content;
+    text-align: center;
+    line-height: 30px;
+    padding: 0 10px;
+}
+
+.inp {
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    width: 30px;
+    padding: 6px 10px;
+}
+
+.inp:focus {
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    min-width: 30px;
+    padding: 6px 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.btn {
+    width: 30px;
+    height: 30px;
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: grey;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: rgb(203, 203, 203);
+}
+
+.btn-sign {
+    width: max-content;
+    padding: 0 5px;
+}
+
+.task-5 .btn-sign {
+    width: 20px;
+    padding: 0 5px;
+}
+
+.active {
+    background-color: rgb(203, 203, 203);
+}
+
+.wrapper {
+    display: flex;
+    gap: 50px;
+}
