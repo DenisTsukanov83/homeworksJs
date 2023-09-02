@@ -8,10 +8,11 @@
 .res {
     border: 2px solid rgb(169, 169, 253);
     border-radius: 5px;
-    min-width: 30px;
-    height: 28px;
     width: max-content;
-    text-align: center;
+    min-width: 30px;
+    max-width: 1200px;
+    height: max-content;
+    min-height: 28px;
     line-height: 30px;
     padding: 0 10px;
 }
@@ -45,6 +46,10 @@ input::-webkit-inner-spin-button {
     cursor: pointer;
     background-color: grey;
     position: relative;
+}
+
+.task-3 .btn, .task-5 .btn {
+    width: 110px;
 }
 
 .btn:hover {
