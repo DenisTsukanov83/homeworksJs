@@ -48,10 +48,6 @@ input::-webkit-inner-spin-button {
     position: relative;
 }
 
-.task-3 .btn, .task-5 .btn {
-    width: 110px;
-}
-
 .btn:hover {
     background-color: rgb(203, 203, 203);
 }
