@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Roboto', sans-serif;
+}
+body {
+  background-color: #dee1e6;
+}
+.container {
+  width: 1000px;
+  margin: auto;
+}
+.tabs {
+  width: 100%;
+}
+.tab {
+  width: 100%;
+  height: max-content;
+  position: relative;
+}
+.btn {
+  position: absolute;
+  width: 100px;
+  height: 40px;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+  cursor: pointer;
+  top: 60px;
+  border: 1px solid black;
+  text-align: center;
+  padding-top: 10px;
+}
+.btn:hover {
+  background-color: #f2f3f5;
+}
+.content {
+  position: absolute;
+  top: 100px;
+  width: 100%;
+  height: 500px;
+  background-color: white;
+  border: 1px solid black;
+  border-top: none;
+}
+.tab-2 .btn {
+  margin-left: 100px;
+}
+.tab-3 .btn {
+  margin-left: 200px;
+}
+.tab-4 .btn {
+  margin-left: 300px;
+}
+.tab-5 .btn {
+  margin-left: 400px;
+}
+.tab-6 .btn {
+  margin-left: 500px;
+}
+.tab-7 .btn {
+  margin-left: 600px;
+}
+.tab-8 .btn {
+  margin-left: 700px;
+}
+.tab-9 .btn {
+  margin-left: 800px;
+}
+.tab-10 .btn {
+  margin-left: 900px;
+}
+.active {
+  z-index: 10;
+}
+.active .btn {
+  border-bottom: none;
+  background-color: white;
+}
+.content {
+  padding: 50px;
+}
+.content-header {
+  display: flex;
+  justify-content: space-between;
+  width: 500px;
+  margin-bottom: 30px;
+}
+.content ul {
+  display: flex;
+  justify-content: space-between;
+  list-style-type: none;
+  width: 400px;
+}
+.content ul li {
+  cursor: pointer;
+}
+.content ul li a {
+  text-decoration: none;
+}
+.content ul li a:visited {
+  text-decoration: none;
+  color: #008dd8;
+}
+.content ul li > a:hover {
+  color: black;
+  text-decoration: underline;
+  color: #008dd8;
+}
+.content h4 {
+  text-transform: uppercase;
+  color: #008dd8;
+  font-weight: 900;
+}
+.content-wrapper {
+  display: flex;
+}
+.content-left {
+  width: 50%;
+}
+.content-left a {
+  font-size: 24px;
+  text-decoration: none;
+  color: black;
+}
+.content-left a:visited {
+  text-decoration: none;
+  color: black;
+}
+.content-left a:hover {
+  color: #008dd8;
+}
+.content-right {
+  width: 50%;
+  padding: 0 35px 35px 35px;
+  font-size: 18px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 400px;
+}
+.content-right a {
+  text-decoration: none;
+  color: black;
+}
+.content-right a:hover {
+  color: #008dd8;
+}
+.content img {
+  width: 100%;
+  height: max-content;
+  margin-bottom: 30px;
+}
