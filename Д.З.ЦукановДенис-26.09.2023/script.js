@@ -9,60 +9,45 @@ addEventListener("DOMContentLoaded", (event) => {
     let heightRect = 0;
     let pointX = 0;
     let pointY = 0;
-    let accessWidth = true;
-    let accessHeight = true;
+    let accessPointX = false;
+    let accessPointY = false;
+    let accessWidth = false;
+    let accessHeight = false;
 
-    ctx.strokeStyle = 'blue';
     ctx.font = "10px serif";
 
     function createRect(x1, y1, x2, y2) {
-        /* if(widthRect != x2 - x1 || heightRect != y2 - y1 || pointX != x1 || pointY != y1) { */
-        if(!accessHeight && !accessWidth) {
-            console.log('stop')
-            /* return; */
+
+        if(pointX == x1) {
+            accessPointX = true;
         } else {
-            
-            requestAnimationFrame(() => createRect(x1, y1, x2, y2));
-            console.log('start')
+            pointX < x1 ? pointX += 1 : pointX -= 1;
+            accessPointX = false;
         }
+
+        if(pointY == y1) {
+            accessPointY = true;
+        } else {
+            pointY < y1 ? pointY += 1 : pointY -= 1;
+            accessPointY = false;
+        }
+
         if(widthRect == x2 - x1) {
+            accessWidth = true;
+        } else {
+            widthRect <= x2 - x1 ? widthRect += 1 : widthRect -= 1;
             accessWidth = false;
-        }
+        } 
+
         if(heightRect == y2 - y1) {
+            accessHeight = true;
+        } else {
+            heightRect <= y2 - y1 ? heightRect += 1 : heightRect -= 1;
             accessHeight = false;
         }
 
-        if(pointX < x1) {
-            pointX += 1;
-        } else {
-            pointX -= 1;
-        }
-
-        if(pointY < y1) {
-            pointY += 1;
-        } else {
-            pointY -= 1;
-        }
-        
-        if(accessWidth) {
-            if(widthRect <= x2 - x1) {
-                widthRect += 1;
-            } else {
-                widthRect -= 1;
-            }
-        }
-
-        if(accessHeight) {
-            if(heightRect <= y2 - y1) {
-                heightRect += 1;
-            } else {
-                heightRect -= 1;
-            }
-        }
-
-        
         ctx.clearRect(0, 0, field.width, field.height);
-        ctx.strokeStyle = 'rgba(0, 0, 255, 1)';
+        ctx.strokeStyle = 'rgb(0, 0, 255)';
         ctx.lineWidth = 2;
         ctx.strokeRect(pointX, pointY, widthRect, heightRect);
         ctx.strokeStyle = 'rgba(0, 128, 0, 0.3)';
@@ -89,9 +74,25 @@ addEventListener("DOMContentLoaded", (event) => {
 
         ctx.stroke();
 
+        showСoordinates(pointX, pointY, pointX + widthRect, pointY + heightRect);
+        showWidth(widthRect);
+        showHeight(heightRect);
+        showArea(widthRect, heightRect);
+        showPerimeter(widthRect, heightRect);
+
+
+        if(!accessPointX || !accessPointY || !accessHeight || !accessWidth) {
+            requestAnimationFrame(() => createRect(x1, y1, x2, y2));
+            console.log('start')
+        } else {
+            console.log('stop')
+            return;
+        }
+
     }
 
     function createRuller() {
+        ctx2.strokeStyle = 'black';
         for(let i = 0; i <= 500; i++) {
             if(i !== 0 && i % 10 == 0 && i % 50 !== 0) {
                 ctx2.beginPath();
@@ -123,11 +124,35 @@ addEventListener("DOMContentLoaded", (event) => {
         }
         
     }
+    
     createRuller(); 
 
+    showСoordinates = (x1, y1, x2, y2) => {
+        const res = document.querySelector('.task-2 .res');
+        res.textContent = `x1: ${x1}, y2: ${y1}, x2: ${x2}, y2: ${y2}`;
+    }
+
+    showWidth = (width) => {
+        const res = document.querySelector('.task-3 .res');
+        res.textContent = `${Math.abs(width)}`;
+    }
+
+    showHeight = (height) => {
+        const res = document.querySelector('.task-4 .res');
+        res.textContent = `${Math.abs(height)}`;
+    }
+
+    showArea = (width, height) => {
+        const res = document.querySelector('.task-5 .res');
+        res.textContent = `${Math.abs(width * height)}`;
+    }
+
+    showPerimeter = (width, height) => {
+        const res = document.querySelector('.task-6 .res');
+        res.textContent = `${Math.abs(width) * 2 + Math.abs(height) * 2}`;
+    }
+
     btn.onclick = () => {
-        accessWidth = true;
-        accessHeight = true;
         const rect = [
             {x: +document.querySelector('.first').value, y: +document.querySelector('.second').value},
             {x: +document.querySelector('.third').value, y: +document.querySelector('.fourth').value}
