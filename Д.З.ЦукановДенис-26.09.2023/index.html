@@ -12,17 +12,25 @@
     <p>
         Создать объект, описывающий прямоугольник (хранит координаты левой верхней и правой нижней точек), и написать следующие функции для работы с таким объектом.
     </p>
-    <div class="task task-1">
-        <div class="btn">Создать объект:</div>
-        <div class="sign">Верхняя точка:</div>
-        <input type="text" class="inp first" placeholder="X" value="50">
-        <input type="text" class="inp second" placeholder="Y" value="50">
-        <div class="sign">Нижняя точка:</div>
-        <input type="text" class="inp third" placeholder="X" value="100">
-        <input type="text" class="inp fourth" placeholder="Y" value="100">
+    <div class="wrapper">
+        <div class="task task-1">
+            <div class="btn">Создать объект:</div>
+            <div class="sign">&#123;x1:</div>
+            <input type="text" class="inp first" placeholder="X" value="50">
+            <div class="sign">y1:</div>
+            <input type="text" class="inp second" placeholder="Y" value="50">
+            <div class="sign">x2:</div>
+            <input type="text" class="inp third" placeholder="X" value="100">
+            <div class="sign">y2:</div>
+            <input type="text" class="inp fourth" placeholder="Y" value="100">
+            <div class="sign">&#125;</div>
+        </div>
+    
+        <div class="wrapper-fields">
+            <canvas height='500' width='500' class="field"></canvas>
+            <canvas height='560' width='560' class="field2"></canvas>
+        </div>
     </div>
-
-    <canvas height='500' width='500' class="field" style="background: #f4f4f4"></canvas>
 
 
     <script src="script.js"></script>

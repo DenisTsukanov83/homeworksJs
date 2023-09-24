@@ -2,8 +2,9 @@
     display: flex;
     align-items: center;
     gap: 10px;
-    width: max-content;
+    width: 50%;
     margin-bottom: 50px;
+
 }
 .res {
     border: 2px solid rgb(169, 169, 253);
@@ -65,16 +66,28 @@ input::-webkit-inner-spin-button {
     background-color: rgb(203, 203, 203);
 }
 
-.field {
-    display: block;
-    margin: auto;
+.wrapper {
+    display: flex;
+    width: 100%;
 }
 
-.rectangle {
-    width: 100px;
-    height: 50px;
-    position: absolute;
-    top: 200px;
-    left: 250px;
-    border: 5px solid blue;
+.wrapper-fields {
+    position: relative;
+    width: 50%;
 }
+
+.field {
+    position: absolute;
+    display: block;
+    margin: auto;
+    background: #f4f4f4;
+    z-index: 2;
+    top: 30px;
+    left: 30px;
+}
+
+.field2 {
+    position: absolute;
+    background: #bababa;
+}
+
