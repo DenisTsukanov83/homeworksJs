@@ -37,7 +37,8 @@ input::-webkit-inner-spin-button {
 }
 
 .btn {
-    width: 130px;
+    width: max-content;
+    min-width: 130px;
     height: 30px;
     border: 2px solid rgb(169, 169, 253);
     border-radius: 5px;
@@ -69,6 +70,7 @@ input::-webkit-inner-spin-button {
 .wrapper {
     display: flex;
     width: 100%;
+    margin-bottom: 80px;
 }
 
 .wrapper-tasks {
