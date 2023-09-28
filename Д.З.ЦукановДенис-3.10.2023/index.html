@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <h2>Домашнее задание №2</h2>
+    <h3>ТЕМА: ОБЪЕКТ. МАССИВЫ. ОБЪЕКТ ARRAY. СТРОКИ. ОБЪЕКТ STRING. ОБЪЕКТ DATE. ОБЪЕКТ MATH. ВВЕДЕНИЕ В ООП</h3>
+    <h3>Задание 1</h3>
+    <p>
+        Создать массив «Список покупок». Каждый элемент массива является объектом, который содержит название продукта, необходимое количество и куплен или нет. Написать несколько функций для работы с таким массивом.
+    </p>
+    <div class="wrapper-1">
+        <div class="task task-1">
+            
+            <div>
+                <div class="sing">Название продукта:</div>
+                <input type="text" class="inp first" value="">
+                <div>можно указать самому или кликнуть ко списку товаров</div>
+            </div>
+            
+            <div>
+                <div class="sing">Кол-во:</div>
+                <input type="text" class="inp second" value="">
+                <div>Указать количество, и можно любые единицы измерения</div>
+            </div>
+            <select name="" id="">
+                <option value="false">Не куплено</option>
+                <option value="true">Куплено</option>
+            </select>
+            <div class="btn">Добавить</div>
+        </div>
+        <div class="list">
+            <h5>Список покупок:</h5>
+            <ol>
+
+            </ol>
+        </div>
+        <div class="drop">
+            <h5>Средние цены на продукты по России</h5>
+        </div>
+    </div>
+    
+    <p>3. Покупка продукта. Функция принимает название продукта и отмечает его как купленный.</p>
+    <div class="task task-2">
+        <div class="sing">Кликните по продукту в списке, что-бы изменить его статус.</div>
+    </div>
+
+    <h3>Задание 2</h3>
+    <p>
+        Создать массив, описывающий чек в магазине. Каждый элемент массива состоит из названия товара, количества и цены за единицу товара. Написать следующие функции.
+    </p>
+    <p>1. Распечатка чека на экран.</p>
+    <p>2. Подсчет общей суммы покупки.</p>
+    <p>3. Получение самой дорогой покупки в чеке.</p>
+    <p>4. Подсчет средней стоимости одного товара в чеке.</p>
+    <div class="wrapper-2">
+        <div class="task task-3">
+            <div class="btn">Распечатать чек</div>
+        </div>
+        <div class="cheque">
+            <div class="cheque-wrap">
+                <div class="header">
+                    <div>ООО "Супермаркет "XXXXXXX"</div>
+                    <div>г. Москва, ул. XXXXXXX, д. 2</div>
+                    <div style="text-align: center;">КАССОВЫЙ ЧЕК(ПРИХОД)</div>
+                    <div>КАССА 0190.01 КАССИР XXXXXXX</div>
+                    <div>Дата: 27/09/2023 14:57 Касса: 190 Смена: 27</div>
+                    <div>Док: 199 Кассир: XXXXXXX</div>
+                    <div class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                    <ol class="cheque-ol"></ol>
+                    <div class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                    <div class="total-2"><div>СУММА ПО ЧЕКУ:&emsp;&emsp;</div><div class="sum"></div></div>
+                    <div class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                    <div class="line">- - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - - -</div>
+                    <div>скидка на чек&emsp;&emsp;:&emsp;&emsp;&emsp;0</div>
+                    <div>No ДК&emsp;&emsp;&emsp;&emsp;&emsp;&nbsp;&thinsp;: XXXXXXXXX</div>
+                    <div class="total-3"><div>Итого&emsp;&emsp;</div><div class="sum sum-2"></div></div>
+                    <div class="total-4"><div>ИТОГО К ОПЛАТЕ</div><div class="sum sum-4"></div></div>
+                    <div class="max">Самый дорогой товар в чеке:</div>
+                    <div class="middle">Средняяя стоимость товара в чеке:</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+
+    <script src="js/script.js"></script>
+</body>
+
+</html>

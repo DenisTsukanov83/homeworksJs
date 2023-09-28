@@ -1,0 +1,172 @@
+@font-face {
+    font-family: "Caveat";
+    src:
+        url("/fonts/Caveat-VariableFont_wght.woff") format("woff"),
+        url("/fonts/MiConv.com__Caveat-VariableFont_wght.woff2") format("woff");
+}
+
+.task {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: max-content;
+    margin-bottom: 50px;
+}
+
+.list {
+    width: 300px;
+    padding: 6px 15px  15px 15px;
+    font-family: Caveat;
+    font-size: 16pt;
+    box-shadow: 10px 5px 10px 10px grey;
+    height: max-content;
+    min-height: 400px;
+}
+
+.inp {
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    width: 75px;
+    padding: 6px 10px;
+}
+
+ol {
+    padding: 0;
+    margin: 0;
+    margin-left: 15px;
+    width: 90%;
+}
+
+.wrapper-2 li div {
+    display: flex;
+    justify-content: space-between;
+}
+
+.list li {
+    cursor: pointer;
+    height: 30px;
+    width: 300px;
+}
+
+.list li:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.name {
+    display: inline-block;
+    width: 150px;
+    height: 30px;
+}
+
+
+.quantity {
+    display: inline-block;
+    width: 78px;
+    height: 30px;
+}
+
+.total {
+    display: inline-block;
+    width: 45px;
+    height: 30px;
+}
+
+.total-2 {
+    display: flex;
+}
+
+.total-3 {
+    display: flex;
+    justify-content: end;
+}
+
+.total-4 {
+    display: flex;
+    justify-content: end;
+    font-size: 14pt;
+    align-items: center;
+    padding: 10px 10px 10px 50px;
+}
+
+.sum-2 {
+    border-bottom: 1px solid black;
+    padding-right: 10px;
+}
+
+.sum-4 {
+
+    font-size: 16pt;
+}
+
+.inp:focus {
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    min-width: 30px;
+    padding: 6px 10px;
+}
+
+input::-webkit-outer-spin-button,
+input::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+}
+
+.btn {
+    width: 130px;
+    height: 30px;
+    border: 2px solid rgb(169, 169, 253);
+    border-radius: 5px;
+    text-align: center;
+    line-height: 30px;
+    cursor: pointer;
+    background-color: grey;
+    position: relative;
+}
+
+.btn:hover {
+    background-color: rgb(203, 203, 203);
+}
+
+.btn-sign {
+    width: max-content;
+    padding: 0 5px;
+}
+
+.active {
+    background-color: rgb(203, 203, 203);
+}
+
+.wrapper-1, .wrapper-2 {
+    display: grid;
+    grid-template-columns: 50% 30% 20%;
+    margin-bottom: 50px;
+}
+
+.cheque {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.cheque-wrap{
+    width: 360px;
+    padding: 39px;
+    box-shadow: 10px 5px 10px 10px grey;
+}
+
+.line {
+    width: 100%;
+}
+
+.drop div {
+    cursor: pointer;
+}
+
+.drop div:hover {
+    background-color: rgb(234, 234, 234);
+}
+
+.task-1 div:nth-child(1) {
+    width: 200px;
+}
+
+.task-1 div:nth-child(2) {
+    width: 200px;
+}
