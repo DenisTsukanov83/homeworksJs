@@ -127,16 +127,8 @@ h3 {
     padding-top: 0.4rem;
 }
 
-.form-wrapper div:nth-child(3) {
-    /* padding-top: 1.0rem; */
-}
-
 .form-wrapper div:nth-child(4) {
     padding-top: 2.6rem;
-}
-
-.form-wrapper div:nth-child(5) {
-    /* padding-top: 1rem; */
 }
 
 .cards-wrapper {

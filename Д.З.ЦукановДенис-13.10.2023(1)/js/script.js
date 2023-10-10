@@ -17,13 +17,16 @@ $(document).ready(function () {
 
 
     inpNum.addEventListener('keyup', () => {
-        let arr = inpNum.value.search(/\D/g);
-        if (inpNum.value.length <= 16 && arr < 0) {
+        if (inpNum.value != inpNum.value.match(/\d\d\d\d \d\d\d\d \d\d\d\d \d\d\d\d/)) {
             cardNum.textContent = inpNum.value.replace(/(?=(\d{4})+(?!\d))/g, " ");
+        } else {
+            cardNum.textContent = inpNum.value;
         }
         if (!inpNum.value.length) {
             cardNum.textContent = '1234 5678 9012 3456';
         }
+
+        
 
     })
 
@@ -35,10 +38,11 @@ $(document).ready(function () {
 
     inpYear.addEventListener('keyup', () => {
         if (inpYear.value.length < 5 && inpYear.value != 0) {
-            cardDate.textContent = cardDate.textContent.replace(/\.\d+/g, `.${inpYear.value}`);
+            cardDate.textContent = cardDate.textContent.replace(/\.\d+/g, `.${inpYear.value}`).replace(/\_/g, '');
+
         }
-        if (!inpYear.value.length) {
-            cardDate.textContent = cardDate.textContent.replace(/\.\d+/, '.2017');
+        if (!inpYear.value.length || inpYear.value == '____') {
+            cardDate.textContent = cardDate.textContent.replace(/\./g, '.2017');
         }
     })
 
@@ -76,6 +80,8 @@ $(document).ready(function () {
         fill.style.fill = `${colorText.value}`;
     })
 
+    //Модальное окно
+
     $('.create').on('click', function () {
         $('.modal').fadeIn();
         $('.create').fadeOut();
@@ -85,7 +91,58 @@ $(document).ready(function () {
         $('.modal').fadeOut();
         $('.create').fadeIn();
     })
+
+
+    //Проверка данных
+
+    const number = $('.inp-number'),
+        sub = $('.form-wrapper :submit'),
+        month = $('.inp-date'),
+        year = $('.inp-year'),
+        name = $('.inp-name');
+        cvv = $('.inp-cvv');
+
+        number.mask('9999 9999 9999 9999');
+        month.mask('99');
+        year.mask('9999')
+        sub.click(function (e) {
+            e.preventDefault()
+
+            let a = false,
+                b = false,
+                c = false,
+                d = false,
+                f = false;
+            
+            inpNum.value == inpNum.value.match(/\d\d\d\d \d\d\d\d \d\d\d\d \d\d\d\d/) ? a = true : a = false;
+            !inpName.value.length ? b = false : b = true;
+            +inpDate.value > 0 && +inpDate.value < 13 ? c = true : c = false;
+            inpYear.value.length != 4 ? d = false : d = true;
+            inpCvv.value.length != 3 ? f = false : f = true;
+
+            !a ? number.css({'border-bottom': '0.2rem solid red'}) : number.css({'border-bottom': '0.2rem solid rgb(98, 139, 141)'});
+            !b ? name.css({'border-bottom': '0.2rem solid red'}) : name.css({'border-bottom': '0.2rem solid rgb(98, 139, 141)'});
+            !c ? month.css({'border-bottom': '0.2rem solid red'}) : month.css({'border-bottom': '0.2rem solid rgb(98, 139, 141)'});
+            !d ? year.css({'border-bottom': '0.2rem solid red'}) : year.css({'border-bottom': '0.2rem solid rgb(98, 139, 141)'});
+            !f ? cvv.css({'border-bottom': '0.2rem solid red'}) : cvv.css({'border-bottom': '0.2rem solid rgb(98, 139, 141)'});
+
+            if(!a || !b || !c || !d || !f) {
+                alert('Введите данные!');
+            } else {
+                number.attr('disabled', 'disabled');
+                name.attr('disabled', 'disabled');
+                month.attr('disabled', 'disabled');
+                year.attr('disabled', 'disabled');
+                cvv.attr('disabled', 'disabled');
+                alert('Данные введены!');
+            }
+
+
+        })
+
 })
+
+
 
 
 
