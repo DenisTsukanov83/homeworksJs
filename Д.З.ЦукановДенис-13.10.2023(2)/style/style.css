@@ -1,0 +1,151 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-size: 1vw;
+    background-color: grey;
+}
+
+header {
+    width: 100rem;
+    padding: 2rem;
+    min-height: 5rem;
+    overflow: hidden;
+    
+}
+
+nav {
+    margin-bottom: 5rem;
+    padding: 1rem;
+    background-color: rgb(157, 156, 156);
+}
+
+.big {
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    color: white;
+    list-style-type: none;
+}
+
+.small {
+    display: none;
+    color: white;
+    list-style-type: none;
+    padding: 9rem 3rem 4rem 3rem ;
+    background-color: black;
+    font-size: 2rem;
+    width: 28rem;
+    height: 30rem;
+    margin-left: 98rem;
+    margin-top: -2rem;
+    transition: 0.5s;
+    position: relative;
+    z-index: 1;
+}
+
+.small li {
+    margin-bottom: 2rem;
+}
+
+li {
+    text-decoration: none;
+    cursor: pointer;
+}
+
+li:hover {
+    color: beige;
+}
+
+.burger {
+    width: 3rem;
+    height: 2.5rem;
+    position: absolute;
+    cursor: pointer;
+    right: 5rem;
+    top: 4.3rem;
+    z-index: 2;
+    display: none;
+}
+
+.burger:hover .el {
+    background-color: beige;
+}
+
+.el {
+    display: block;
+    width: 3rem;
+    height: 0.5rem;
+    background-color: white;
+    position: absolute;
+    border-radius: 0.5rem;
+    transition: 0.5s;
+}
+
+.one {
+    top: 0;
+}
+
+.two {
+    top: 1rem;
+    opacity: 1;
+}
+
+.three {
+    bottom: 0;
+}
+
+.modal {
+    width: 65rem;
+    height: 30rem;
+    position: absolute;
+    left: 19%;
+    top: 20%;
+    display: none;
+    overflow: hidden;
+    background-color: #fff;
+}
+
+/* .modal-1 {
+    background-color: red;
+} */
+
+.modal-2 {
+    background-color: green;
+}
+.modal-3 {
+    background-color: blue;
+}
+
+.modal-container {
+    transform: scale(0.5);
+    margin-top: -20rem;
+    width: 115rem;
+    margin-left: -20rem;
+}
+
+
+
+
+
+@media screen and (max-width: 1200px) {
+
+    .big {
+        display: none;
+    }
+
+    .small {
+        display: block;
+    }
+
+    .burger {
+        display: block;
+    }
+
+    nav {
+        display: none;
+    }
+}

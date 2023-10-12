@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="js/code.jquery.com_jquery-3.7.1.js"></script>
+    <script src="js/script.js"></script>
+    <link rel="stylesheet" href="style/style.css">
+    <link rel="stylesheet" href="style/modal-1.css">
+    <title>Credit card</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul class="big">
+                <li class="dz-1">Домашнее задание №1</li>
+                <li class="dz-2">Домашнее задание №2</li>
+                <li class="dz-3">Домашнее задание №3</li>
+            </ul>
+        </nav>
+        <div class="burger">
+            <div class="el one"></div>
+            <div class="el two"></div>
+            <div class="el three"></div>
+        </div>
+        <ul class="small">
+            <li class="dz-1">Домашнее задание №1</li>
+            <li class="dz-2">Домашнее задание №2</li>
+            <li class="dz-3">Домашнее задание №3</li>
+        </ul>
+
+    </header>
+    <div class="modal modal-1">
+        <div class="modal-container">
+            <h3>Задача №1</h3>
+            <p>Запросите у пользователя число, возведите это число во
+                2-ю степень и выведите на экран.
+            </p>
+            <div class="task task-1">
+                <div>
+                    <input type="number" class="inp" value="">
+                </div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №2</h3>
+            <p>
+                Запросите у пользователя 2 числа и выведите среднее арифметическое этих чисел.
+            </p>
+            <div class="task task-2">
+                <div>
+                    <input type="number" class="inp first" value="">
+                </div>
+                <div>
+                    <input type="number" class="inp second" value="">
+                </div>
+                <div class="sign">&#956;</div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №3</h3>
+            <p>
+                Запросите у пользователя длину стороны квадрата и выведите площадь такого квадрата.
+            </p>
+            <div class="task task-3">
+                <div>
+                    <input type="number" class="inp" value="">
+                </div>
+                <div class="sign">S</div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №4</h3>
+            <p>
+                Реализуйте конвертор из километров в мили (пользователь вводит километры, программа выводит константу). 1км = 0,621371 миль. Это значение укажите в коде как константу.
+            </p>
+            <div class="task task-4">
+                <div>
+                    <input type="number" class="inp" value="">
+                </div>
+                <div class="sign">км</div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+                <div class="sign">миль</div>
+            </div>
+        
+            <h3>Задача №5</h3>
+            <p>
+                Реализуйте калькулятор. Пользователь вводит два числа, а программа выводит результат действий + - */ . между этими числами.
+            </p>
+            <div class="task task-5">
+                <div>
+                    <input type="number" class="inp first" value="">
+                </div>
+                <div class="btn btn-sign active">+</div>
+                <div class="btn btn-sign">-</div>
+                <div class="btn btn-sign">*</div>
+                <div class="btn btn-sign">/</div>
+                <div>
+                    <input type="number" class="inp second" value="">
+                </div>
+                <div class="btn btn-equal">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №6</h3>
+            <p>
+                Пользователь вводит значения a и b для формулы a * x + b = 0, а программа считает и выводит значение x.
+            </p>
+            <div class="task task-6">
+                <div>
+                    <input type="number" class="inp first" value="" placeholder="a">
+                </div>
+                <div class="sign">* x +</div>
+                <div>
+                    <input type="number" class="inp second" value="" placeholder="b">
+                </div>
+                <div class="sign">= 0;</div>
+                <div class="sign">x</div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №7</h3>
+            <p>
+                Запросите у пользователя текущее время (часы и минуты) и выведите, сколько часов и минут осталось до следующего дня.
+            </p>
+            <div class="task task-7">
+                <div class="sign">часы:</div>
+                <div>
+                    <input type="number" class="inp first" value="">
+                </div>
+                <div class="sign">минуты:</div>
+                <div>
+                    <input type="number" class="inp second" value="">
+                </div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №8</h3>
+            <p>
+                Запросите у пользователя трехзначное число и выведите вторую цифру этого числа.Для решения задачи используйте оператор % (остаток от деления).
+            </p>
+            <div class="task task-8">
+                <div>
+                    <input type="number" class="inp" value="">
+                </div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №9</h3>
+            <p>
+                Запросите у пользователя пятизначное число и переместите последнюю цифру в начало (из числа 12345 должно получиться число 51234).
+            </p>
+            <div class="task task-9">
+                <div>
+                    <input type="number" class="inp" value="">
+                </div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        
+            <h3>Задача №10</h3>
+            <p>
+                Зарплата работника составляет $250 + 10% от продаж. Запросите общую сумму продаж за месяц и посчитайте зарплату.
+            </p>
+            <div class="task task-10">
+                <div>
+                    <input type="number" class="inp" value="">
+                </div>
+                <div class="btn">=</div>
+                <div class="res"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal modal-2"></div>
+    <div class="modal modal-3"></div>
+
+    <script src="js/modal-1.js"></script>
+</body>
+
+</html>
